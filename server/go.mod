@@ -4,6 +4,8 @@ go 1.21.6
 
 require github.com/quic-go/quic-go v0.41.0
 
+require github.com/valyala/gozstd v1.20.1 // indirect
+
 require (
 	github.com/andybalholm/brotli v1.1.0
 	github.com/go-task/slim-sprig v0.0.0-20230315185526-52ccab3ef572 // indirect
