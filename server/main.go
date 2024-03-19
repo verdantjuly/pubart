@@ -2,11 +2,11 @@ package main
 
 import (
 	"log"
+	"net/http"
 	"pubart/api"
 	baseapi "pubart/api/base"
 	"runtime"
-
-	"github.com/quic-go/quic-go/http3"
+	// "github.com/quic-go/quic-go/http3"
 )
 
 func main() {
@@ -14,12 +14,12 @@ func main() {
 	runtime.GOMAXPROCS(runtime.NumCPU())
 
 	handler := api.HostRouteHandler{}
-	handler.RegisterHost("pubart.app", baseapi.HTTPHandler{})
+	handler.RegisterHost("127.0.0.1:8080", baseapi.HTTPHandler{})
 
-	if err := http3.ListenAndServe(
-		":443",
-		"ssl/certificate.crt",
-		"ssl/private.key",
+	if err := http.ListenAndServe(
+		":8080",
+		// "ssl/certificate.crt",
+		// "ssl/private.key",
 		&handler,
 	); err != nil {
 		log.Fatalln("HTTP 관련 수신 소켓을 초기화하는 과정에서 예외가 발생하였습니다.", err.Error())
