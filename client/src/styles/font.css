@@ -1,0 +1,15 @@
+/* 경량화된 폰트를 사용합니다 (subset) */
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: normal;
+    font-display: swap;
+    src: url(../assets/font/Pretendard-Medium.woff2) format("woff2");
+}
+
+@font-face {
+    font-family: "Pretendard";
+    font-weight: bold;
+    font-display: swap;
+    src: url(../assets/font/Pretendard-Bold.woff2) format("woff2");
+}

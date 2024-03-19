@@ -1,0 +1,32 @@
+{
+  "name": "pubart",
+  "version": "1.0.0",
+  "description": "소설, 만화, 웹툰 및 애니메이션 글로벌 플랫폼",
+  "main": "index.js",
+  "author": "Dev Ttangkong",
+  "license": "ISC",
+  "scripts": {
+    "release": "set BUILD_TYPE=production && webpack",
+    "debug": "set BUILD_TYPE=development && webpack --watch",
+    "dev": "set BUILD_TYPE=development && webpack-dev-server --hot"
+  },
+  "devDependencies": {
+    "@swc/core": "^1.4.8",
+    "@types/serviceworker": "^0.0.84",
+    "css-loader": "^6.10.0",
+    "css-minimizer-webpack-plugin": "^6.0.0",
+    "html-webpack-plugin": "^5.6.0",
+    "mini-css-extract-plugin": "^2.8.1",
+    "terser-webpack-plugin": "^5.3.10",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.4.2",
+    "webpack": "^5.90.3",
+    "webpack-bundle-analyzer": "^4.10.1",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.3"
+  },
+  "dependencies": {
+    "preact": "^10.19.6",
+    "preact-router": "^4.1.2"
+  }
+}

@@ -1,0 +1,20 @@
+
+button {
+    background-color: transparent;
+    font-weight: bold;
+    border: none;
+    border-radius: 1e10px;
+    padding: 10px 15px;
+}
+
+button.primary {
+    background-color: var(--primary);
+    color: white;
+    cursor: pointer;
+    transition-property: background-color, box-shadow;
+    transition-duration: var(--td);
+}
+button.primary:hover {
+    background-color: var(--primary-hover);
+    box-shadow: 0px 0px 5px var(--shadow);
+}

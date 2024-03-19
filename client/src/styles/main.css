@@ -1,0 +1,10 @@
+
+* {
+    font-family: "Pretendard";
+    font-weight: normal;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--foreground);
+}

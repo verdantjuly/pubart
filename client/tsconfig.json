@@ -1,0 +1,12 @@
+{
+    "compilerOptions": {
+        "outDir": "./dist/",
+        "noImplicitAny": true,
+        "module": "ES2022",
+        "target": "ES2017", // 해당 플랫폼 특정상 JS 버전이 낮을 이유가 전혀 없습니다.
+        "jsx": "react-jsx",
+        "jsxImportSource": "preact",
+        "allowJs": true,
+        "moduleResolution": "node"
+    }
+}

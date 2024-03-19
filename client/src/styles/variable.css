@@ -1,0 +1,11 @@
+
+/* 색상을 선언하는 경우 접미사 color를 생략해야 합니다. */
+:root {
+    --primary: #006ae2;
+    --primary-hover: #025abe;
+    --background: white;
+    --foreground: black;
+    --shadow: rgba(0, 0, 0, 0.2);
+
+    --td: 0.2s; /* transition-duration */
+}
