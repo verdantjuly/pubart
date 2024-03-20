@@ -8,7 +8,7 @@ import (
 	"strings"
 
 	"github.com/andybalholm/brotli"
-	"github.com/valyala/gozstd"
+	// "github.com/valyala/gozstd"
 )
 
 // 주어진 HTTP 요청에 적합한 압축 유형으로 주어진 데이터를 압축합니다.
@@ -18,8 +18,6 @@ func Compress(r *http.Request, content *[]byte) string {
 	switch compressType {
 	case "gzip":
 		CompressGzip(content)
-	case "zstd":
-		CompressZstd(content)
 	case "br":
 		CompressBrotli(content)
 	case "deflate":
@@ -83,6 +81,7 @@ func CompressGzip(content *[]byte) {
 	*content = buffer.Bytes()
 }
 
+/*
 func CompressZstd(content *[]byte) {
 	buffer := bytes.Buffer{}
 	writer := gozstd.NewWriterLevel(&buffer, 19)
@@ -91,3 +90,4 @@ func CompressZstd(content *[]byte) {
 
 	*content = buffer.Bytes()
 }
+*/

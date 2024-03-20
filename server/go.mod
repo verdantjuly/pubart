@@ -4,7 +4,7 @@ go 1.21.6
 
 require github.com/quic-go/quic-go v0.41.0
 
-require github.com/valyala/gozstd v1.20.1 // indirect
+require github.com/valyala/gozstd v1.20.1
 
 require (
 	github.com/andybalholm/brotli v1.1.0
