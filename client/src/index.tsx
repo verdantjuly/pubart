@@ -7,6 +7,8 @@ import './styles/template.css';
 import './styles/main';
 import './styles/font';
 
+import 'web-touch-ripple';
+
 const isDebug = Boolean(process.env.IS_DEBUG);
 
 // 클라이언트가 서비스 워커를 지원하는 경우, 정적 리소스를 캐싱하기 위해 서비스 워커를 등록해야 합니다.
