@@ -4,8 +4,29 @@
     --primary: #006ae2;
     --primary-hover: #025abe;
     --background: white;
-    --foreground: black;
+    --background-hover: rgb(230, 230, 230);
+    --background-selected: #eaf1fb;
+    --foreground: rgb(240, 240, 240);
+    --foreground-selected: #162235;
+    --text: black;
+    --text2: rgb(30, 30, 30);
+    --text3: rgb(60, 60, 60);
     --shadow: rgba(0, 0, 0, 0.2);
+    --ripple: rgba(0, 0, 0, 0.1);
+}
+.dark {
+    --background: black;
+    --background-hover: rgb(10, 11, 13);
+    --background-selected: rgb(30, 31, 33);
+    --foreground: rgb(20, 21, 23);
+    --foreground-selected: var(--text);
+    --text: white;
+    --text2: rgb(200, 200, 200);
+    --text3: rgb(150, 150, 150);
+    --ripple: rgba(255, 255, 255, 0.1);
+}
 
+:root {
     --td: 0.2s; /* transition-duration */
+    --content-padding: 15px;
 }

@@ -1,12 +1,13 @@
-import { useState } from "preact/hooks"
 import { TouchRipple } from "./TouchRipple"
 
 export namespace Button {
-    export function Primary({text}: {
-        text: string
+    export function Primary({text, wait, onTap}: {
+        text: string,
+        wait?: boolean,
+        onTap: Function
     }) {
         return (
-            <TouchRipple onTap={() => console.log("hello world")}>
+            <TouchRipple onTap={onTap} wait={wait}>
                 <button class="primary">{text}</button>
             </TouchRipple>
         )
