@@ -6,6 +6,7 @@ import (
 	"mime"
 	"os"
 	"path/filepath"
+	"strings"
 )
 
 // 주어진 파일 경로에서 확장자에 해당하는 Mime 타입을 반환합니다.
@@ -21,4 +22,13 @@ func ContentAndType(path string) ([]byte, string) {
 	}
 
 	return content, ContentType(path)
+}
+
+func IsApi(path string) bool {
+	paths := strings.Split(path, "/")
+	if paths[1] == "api" {
+		return true
+	} else {
+		return false
+	}
 }

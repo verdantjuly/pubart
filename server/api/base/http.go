@@ -3,7 +3,9 @@ package baseapi
 import (
 	"net/http"
 	"path/filepath"
+	"pubart/api/health"
 	"pubart/cache"
+	"pubart/json"
 	"pubart/util"
 )
 
@@ -11,7 +13,23 @@ type HTTPHandler struct {
 	http.Handler
 }
 
-func (HTTPHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+func (h HTTPHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
+	// 사용자가 요청한 경로가 api로 시작하는 경우 BackHandler로 연결합니다.
+	if util.IsApi(r.URL.Path) {
+		h.BackHandler(w, r)
+	} else {
+		h.FrontHandler(w, r)
+	}
+}
+func (HTTPHandler) BackHandler(w http.ResponseWriter, r *http.Request) {
+	var data interface{}
+	if r.URL.Path == "/api/health" {
+		data = health.Health()
+	}
+	json.WriteWith(data, w)
+}
+
+func (HTTPHandler) FrontHandler(w http.ResponseWriter, r *http.Request) {
 	ext := filepath.Ext(r.URL.Path)
 	res := cache.Resource{}
 
@@ -33,6 +51,5 @@ func (HTTPHandler) ServeHTTP(w http.ResponseWriter, r *http.Request) {
 		res.IgnoreCompress = true
 		w.Header().Set("Cache-Control", "max-age=31536000, public")
 	}
-
 	res.WriteWith(w, r)
 }

@@ -10,7 +10,7 @@ import (
 )
 
 func main() {
-	// 프로세스의 모든 CPU 코어를 활용하다록 설정합니다.
+	// 프로세스의 모든 CPU 코어를 활용하도록 설정합니다.
 	runtime.GOMAXPROCS(runtime.NumCPU())
 
 	handler := api.HostRouteHandler{}
