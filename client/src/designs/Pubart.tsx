@@ -20,13 +20,13 @@ export namespace Pubart {
         static Body() {
             return (
                 <TS.FlexColumn style={{
-                    width: "200px",
+                    width: "220px",
                     height: "100%",
                     borderRadius: "0px 15px 15px 0px",
                 }}>
-                    <Sidebar.Item selected={true} title="Home" iconName={"home"} />
-                    <Sidebar.Item selected={false} title="Navigate" iconName={"navigate"} />
-                    <Sidebar.Item selected={false} title="User" iconName={"user"} />
+                    <Sidebar.Item selected={true} title="홈" iconName={"home"} />
+                    <Sidebar.Item selected={false} title="탐색" iconName={"navigate"} />
+                    <Sidebar.Item selected={false} title="사용자" iconName={"user"} />
                 </TS.FlexColumn>
             )
         }

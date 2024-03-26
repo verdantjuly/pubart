@@ -46,7 +46,6 @@ module.exports = {
         extensions: [".tsx", ".ts", ".js", ".css"],
     },
     plugins: [
-        // new BundleAnalyzerPlugin(),
         new MiniCssExtractPlugin(),
         new CSSMinimizerPlugin({
             parallel: true, // 병렬 처리

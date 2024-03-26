@@ -22,13 +22,16 @@ button.primary:hover {
 
 
 .sidebar-item {
-    border-radius: 0px 1e10px 1e10px 0;
+    border-radius: 1e10px;
     align-items: "center";
     gap: var(--content-padding);
-    padding: var(--content-padding);
+    margin: 0px var(--content-padding);
+    padding: 10px 15px;
     color: var(--text3);
     fill: var(--text3);
-
+    align-items: center;
+    
+    cursor: pointer;
     transition-duration: var(--td);
     transition-property: background-color, color, stroke, fill;
 }
@@ -41,4 +44,5 @@ button.primary:hover {
     background-color: var(--background-selected);
     color: var(--foreground-selected);
     fill: var(--foreground-selected);
+    cursor: default;
 }
