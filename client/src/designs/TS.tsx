@@ -2,8 +2,8 @@ import { VNode } from "preact";
 import { JSXInternal } from "preact/src/jsx"
 
 /** Template Style */
-export namespace TS {
-    export function FlexRow({className, style = {}, children}: {
+export namespace Flex {
+    export function Row({className, style = {}, children}: {
         className?: string,
         style?: JSXInternal.CSSProperties,
         children: VNode | VNode[],
@@ -16,7 +16,7 @@ export namespace TS {
         )
     }
 
-    export function FlexColumn({className, style = {}, children}: {
+    export function Column({className, style = {}, children}: {
         className?: string,
         style?: JSXInternal.CSSProperties,
         children: VNode | VNode[],

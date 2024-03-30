@@ -1,13 +1,21 @@
-import { TS } from "../designs/TS"
+import { Flex } from "../designs/TS"
 import { Pubart } from "../designs/Pubart"
 
 export function HomePage({path}: {
     path: string
 }) {
     return (
-        <TS.FlexColumn style={{height: "100%"}}>
+        <Flex.Column style={{height: "100%"}}>
             <Pubart.Header />
-            <Pubart.Sidebar.Body />
-        </TS.FlexColumn>
+            <Flex.Row style={{height: "100%"}}>
+                <Pubart.Sidebar.Body />
+                <div style={{
+                    flex: 1,
+                    backgroundColor: "var(--content-background)",
+                    borderRadius: "15px",
+                    padding: 15,
+                }}>Hello world</div>
+            </Flex.Row>
+        </Flex.Column>
     )
 }

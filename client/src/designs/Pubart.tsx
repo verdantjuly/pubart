@@ -1,6 +1,6 @@
-import { Icon, IconBuilder, IconSize } from "../components/Icon";
+import { Icon, IconSize } from "../components/Icon";
 import { TouchRipple } from "../components/TouchRipple";
-import { TS } from "./TS";
+import { Flex } from "./TS";
 
 export namespace Pubart {
     export function Header() {
@@ -19,7 +19,7 @@ export namespace Pubart {
     export class Sidebar {
         static Body() {
             return (
-                <TS.FlexColumn style={{
+                <Flex.Column style={{
                     width: "220px",
                     height: "100%",
                     borderRadius: "0px 15px 15px 0px",
@@ -27,7 +27,7 @@ export namespace Pubart {
                     <Sidebar.Item selected={true} title="홈" iconName={"home"} />
                     <Sidebar.Item selected={false} title="탐색" iconName={"navigate"} />
                     <Sidebar.Item selected={false} title="사용자" iconName={"user"} />
-                </TS.FlexColumn>
+                </Flex.Column>
             )
         }
 
@@ -38,10 +38,10 @@ export namespace Pubart {
         }) {
             return (
                 <TouchRipple onTap={selected ? null : () => {}}>
-                    <TS.FlexRow className={`sidebar-item ${selected ? "selected" : ""}`}>
+                    <Flex.Row className={`sidebar-item ${selected ? "selected" : ""}`}>
                         <Icon fill={selected} name={iconName} size={IconSize.inNavigate} />
                         <p>{title}</p>
-                    </TS.FlexRow>
+                    </Flex.Row>
                 </TouchRipple>
             )
         }

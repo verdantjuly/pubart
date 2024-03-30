@@ -36,7 +36,7 @@ button.primary:hover {
     transition-property: background-color, color, stroke, fill;
 }
 .sidebar-item:hover {
-    background-color: var(--foreground);
+    background-color: var(--background-hover);
     color: var(--text);
     fill: var(--text);
 }
